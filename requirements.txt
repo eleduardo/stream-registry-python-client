@@ -1,0 +1,4 @@
+requests
+logzero
+confluent-kafka
+avro-python3
