@@ -24,7 +24,7 @@ class ConsumerTests(unittest.TestCase):
 
     def test_simple_consumer(self):
         consumer, topics = cbuiler.create_consumer(registry_config=self.registry_config, stream_name=self.stream_name,
-                                           avro_consumer=False, auto_subscribe=True, kafka_properties={'auto.offset.reset': 'latest'})
+                                                   avro_consumer=False, auto_subscribe=True, kafka_properties={'auto.offset.reset': 'latest'})
         while True:
             msg = consumer.poll(1.0)
 

@@ -80,6 +80,7 @@ def __build_highlevel_consumer(kafka_config: Dict[str, str]):
 def __build_avro_consumer(kafka_config: Dict[str, str]):
     return AvroConsumer(kafka_config)
 
+
 def __merge_properties(stream_registry_props: Dict[str, str], user_properties: Dict[str, str]):
     """ Merge stream registry configuration into kafka properties"""
     properties = {}

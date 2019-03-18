@@ -20,8 +20,9 @@ packages = find_packages()
 print(packages)
 
 setup(
-    author="Eduardo A Solis",
-    author_email='esolis@homeaway.com',
+    author="Expedia Group OSS",
+    author_email='oss@expediagroup.com',
+    license='Apache License Version 2.0',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
@@ -39,7 +40,7 @@ setup(
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_require,
-    url='https://github.com/eleduardo/stream_registry_python_client',
-    version='0.1.0',
+    url='https://github.com/homeaway/stream_registry_python_client',
+    version='0.0.1',
     zip_safe=False,
 )

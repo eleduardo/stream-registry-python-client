@@ -78,7 +78,7 @@ def create_avro_producer(registry_config: Dict[str, str], stream_name: str, key_
         logger.error("An Avro schema is required for key and value")
         return None
 
-    key_schema= avro.loads(key_schema_str)
+    key_schema = avro.loads(key_schema_str)
 
     value_schema = avro.loads(value_schema_str)
     logger.info("Properly initalized AVRO schema objects for a producer")

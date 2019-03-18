@@ -51,13 +51,10 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr .pytest_cache
 
 lint: ## check style with flake8
-	flake8 stream_registry_python_client tests
+	pycodestyle --first
 
 test: ## run tests quickly with the default Python
-	python3 -m pytest tests
-
-test-all: ## run tests on every Python version with tox
-	tox
+	tox -r
 
 coverage: ## check code coverage quickly with the default Python
 	coverage run --source stream_registry_python_client -m pytest

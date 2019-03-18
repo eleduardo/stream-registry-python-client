@@ -4,4 +4,5 @@ pytest>=2.8
 pytest-cov
 pytest-sugar
 mock
-tox==2.7.0
+tox
+sphinx

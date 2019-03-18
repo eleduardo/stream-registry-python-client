@@ -40,7 +40,7 @@ class TestStreamRegistryClient (unittest.TestCase):
         mock_resp.ok = False
         mock_put.return_value = mock_resp
         producer_data = restclient.register_producer({'base_url': 'http://localhost',
-                                      'region': 'someregion',
-                                      'app_name': 'someappname'
-                                      }, 'testapp')
+                                                      'region': 'someregion',
+                                                      'app_name': 'someappname'},
+                                                     'testapp')
         self.assertIsNone(producer_data)
