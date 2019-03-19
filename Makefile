@@ -50,10 +50,10 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
 
-lint: ## check style with flake8
+lint: ## check style with pycodestyle
 	pycodestyle --first
 
-test: ## run tests quickly with the default Python
+test: ## run unit tests quickly with tox
 	tox -r
 
 coverage: ## check code coverage quickly with the default Python
@@ -73,13 +73,13 @@ docs: ## generate Sphinx HTML documentation, including API docs
 servedocs: docs ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C docs html' -R -D .
 
-release: dist ## package and upload a release
+release: dist ## package and UPLOAD a release
 	twine upload dist/*
 
-dist: clean ## builds source and wheel package
+dist: clean ## builds source and wheel package, no upload
 	python setup.py sdist
 	python setup.py bdist_wheel
 	ls -l dist
 
-install: clean ## install the package to the active Python's site-packages
+install: clean test## install the package to the active Python's site-packages
 	python setup.py install

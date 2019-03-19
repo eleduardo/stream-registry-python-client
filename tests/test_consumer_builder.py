@@ -15,8 +15,8 @@ import unittest
 
 
 class ConsumerTests(unittest.TestCase):
-    registry_config = {'base_url': 'http://streamregistry-test.us-east-1-vpc-88394aef.slb-internal.test.aws.away.black',
-                       'region': 'us-east-1-vpc-88394aef',
+    registry_config = {'base_url': 'http://streamregistry',
+                       'region': 'someregion',
                        'app_name': 'blahblah'
                        }
 
